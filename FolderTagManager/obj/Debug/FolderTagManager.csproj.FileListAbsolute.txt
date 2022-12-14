@@ -1,0 +1,12 @@
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\bin\Debug\FolderTagManager.exe.config
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\bin\Debug\FolderTagManager.exe
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\bin\Debug\FolderTagManager.pdb
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\obj\Debug\FolderTagManager.csproj.AssemblyReference.cache
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\obj\Debug\FolderTagManager.csproj.SuggestedBindingRedirects.cache
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\obj\Debug\FolderTagManager.Form1.resources
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\obj\Debug\FolderTagManager.Properties.Resources.resources
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\obj\Debug\FolderTagManager.csproj.GenerateResource.cache
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\obj\Debug\FolderTagManager.csproj.CoreCompileInputs.cache
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\obj\Debug\FolderTagManager.exe
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\obj\Debug\FolderTagManager.pdb
+F:\Microsoft VS save\FolderTagManager\FolderTagManager\obj\Debug\FolderTagManager.Settings.resources
