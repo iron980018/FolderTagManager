@@ -15,10 +15,9 @@ namespace FolderTagManager
     {
         private bool adress_change = false;
         private string s;
-        public Settings(Form1 father)
+        public Settings()
         {
             InitializeComponent();
-            this.Tag = father;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -29,17 +28,19 @@ namespace FolderTagManager
 
         private void button1_Click(object sender, EventArgs e)//離開
         {
-            this.Close();
+            //this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)//儲存
         {
+            /*
             if (adress_change)
             {
                 adress_change = false;
                 ((Form1)this.Tag).change_adress(s);
                 MessageBox.Show("成功 ! ");
             }
+            */
         }
     }
 }

@@ -24,18 +24,24 @@ namespace FolderTagManager
         private int selectedIndex;
         private string[] empty_tags = new string[5];
 
-        public void change_adress(string new_adr)
+        public void change_adress()
         {
-            start_adress = @new_adr;
-            MessageBox.Show(start_adress);
-
-            StreamWriter sw = new StreamWriter(@".\settings.txt");   //error         
-            sw.WriteLine(start_adress);
-            for (int i = 0; i < 100; i++)
+            StreamWriter sw = new StreamWriter(@"./settings.txt");
+            try
             {
-                sw.WriteLine(tag_kind[i]);
+                sw.WriteLine(start_adress);
+                for (int i = 0; i < 100; i++)
+                {
+                    sw.WriteLine(tag_kind[i]);
+                }
+                sw.Close();
             }
-            sw.Close();
+            catch (Exception e)
+            {
+            }
+            finally
+            {
+            }
         }
 
         private void set_empty_tags()// (done?
@@ -355,8 +361,13 @@ namespace FolderTagManager
 
         private void button2_Click(object sender, EventArgs e)//設定 (done?
         {
-            Settings form = new Settings(this);
-            form.ShowDialog();
+            FolderBrowserDialog path = new FolderBrowserDialog();
+            //path.ShowDialog();
+            if(path.ShowDialog() == DialogResult.OK)
+            {
+                start_adress = path.SelectedPath;
+                change_adress();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)//開啟 (done?
@@ -387,11 +398,14 @@ namespace FolderTagManager
         private void button3_Click(object sender, EventArgs e)//remove tag (error
         {
             bool all_space = true;
-            for (int i = 0; i < input_tag_name.Length; i++)
+            if (input_tag_name.Length != null)
             {
-                if (input_tag_name[i] != ' ')
+                for (int i = 0; i < input_tag_name.Length; i++)
                 {
-                    all_space = false;
+                    if (input_tag_name[i] != ' ')
+                    {
+                        all_space = false;
+                    }
                 }
             }
             clear_datagrid();
@@ -403,7 +417,7 @@ namespace FolderTagManager
             else if (all_space)
             {
                 show_all_datagird();
-                MessageBox.Show("space");
+                MessageBox.Show("space or nothing");
             }
             else
             {
@@ -446,11 +460,14 @@ namespace FolderTagManager
         private void button5_Click(object sender, EventArgs e)//add tag (error
         {
             bool all_space = true;
-            for (int i = 0; i < input_tag_name.Length; i++)
+            if(input_tag_name.Length != null)
             {
-                if (input_tag_name[i] != ' ')
+                for (int i = 0; i < input_tag_name.Length; i++)
                 {
-                    all_space = false;
+                    if (input_tag_name[i] != ' ')
+                    {
+                        all_space = false;
+                    }
                 }
             }
             clear_datagrid();
@@ -462,7 +479,7 @@ namespace FolderTagManager
             else if (all_space)
             {
                 show_all_datagird();
-                MessageBox.Show("space");
+                MessageBox.Show("space or nothing");
             }
             else
             {
